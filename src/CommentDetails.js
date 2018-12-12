@@ -6,7 +6,7 @@ const CommentDetail = (props) => {
     return (
         <div className="comment">
             <a href="/" className="avatar">
-                <img alt="avatar" src={faker.image.avatar()} />
+                <img alt="avatar" src={props.avatar} />
             </a>
             <div className="content">
                 <a href="/" className="author">
@@ -15,7 +15,7 @@ const CommentDetail = (props) => {
                 <div className="metadata">
                     <span className="date">{props.timeAgo.toISOString().split('T')[0]}</span>
                 </div>
-                <div className="text">A random comment!</div>
+                <div className="text">{props.content}</div>
             </div>
         </div>
     );
